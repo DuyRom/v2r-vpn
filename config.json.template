@@ -1,0 +1,25 @@
+{
+  "inbounds": [{
+    "port": ${V2RAY_PORT},
+    "protocol": "vmess",
+    "settings": {
+      "clients": [{
+        "id": "${V2RAY_ID}"
+      }],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "${V2RAY_PATH}",
+        "headers": {
+          "Host": "${V2RAY_HOST}"
+        }
+      }
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom",
+    "settings": {}
+  }]
+}
