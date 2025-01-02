@@ -23,11 +23,12 @@ docker build -t v2ray-image .
 
 ```bash
 docker run -d \
+  -p 80:80 \
   -e V2RAY_PORT=80 \
   -e V2RAY_ID=cdfd3020-750a-4f52-9919-1bcf0f5c469e \
   -e V2RAY_PATH=/v2ray \
-  -e V2RAY_HOST=m.example.com \
-  --name v2ray-container \
-  v2ray-image
+  -e V2RAY_HOST=example.com \
+  --name v2ray \
+ v2ray-image
 ```
 
